@@ -58,8 +58,11 @@
                 <p class="lead text-muted">This is the image management sample web site.</p>
                 <div class="form-group">
                     <label></label>
-                    <input type="file" name="images" class="form-control"/>
+                    <input type="file" id="images" name="images" class="form-control" multiple onchange="onChangedFiles()"/>
                 </div>
+                <p id="preview-container">
+                    
+                </p>
                 <p>
                     <button type="submit" class="btn btn-primary">Upload</button>
                     <button type="button" class="btn btn-secondary">Upload AJAX</button>
@@ -107,6 +110,6 @@
             });
         </script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
+        <script src="assets/js/home-index.js" type="text/javascript"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
     </body></html>

@@ -50,9 +50,10 @@ public class HomeServlet extends HttpServlet {
         String relativePath = request.getContextPath() + "/data/";
         Path path = FileSystems.getDefault().getPath(absolutePath);
 
+        
         Files.walk(path).forEach(filePath -> {
             if (Files.isRegularFile(filePath) && isImageFile(filePath)) {
-                String imagePath = request.getContextPath() + "/data/" + filePath.getFileName();
+                String imagePath = relativePath + filePath.getFileName();
                 images.add(imagePath);
             }
         });
